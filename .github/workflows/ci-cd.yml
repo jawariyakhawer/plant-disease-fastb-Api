@@ -63,4 +63,4 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/plant-disease-api:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/plant-disease-api:${{ github.sha }}
-```
+
