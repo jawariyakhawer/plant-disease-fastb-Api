@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Disease Detection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-icon">🌱</div>
+
+        <div>
+            <strong>Plant<span>Disease</span></strong>
+            <small>AI-powered plant health analysis</small>
+        </div>
+    </div>
+
+    <div class="online">
+        <i></i>
+        AI Model Online
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <label>SMART AGRICULTURE • 38 CLASSES</label>
+
+        <h1>
+            Detect Plant Diseases
+            <br>
+            <em>with AI</em>
+        </h1>
+
+        <p>
+            Upload a clear leaf image and let the trained
+            deep-learning model analyze its condition.
+        </p>
+
+    </section>
+
+
+    <!-- MAIN GRID -->
+    <section class="grid">
+
+        <!-- UPLOAD CARD -->
+        <div class="card">
+
+            <div class="heading">
+
+                <div>
+                    <h2>Upload Plant Image</h2>
+
+                    <small>
+                        JPG, JPEG or PNG • Clear leaf images work best
+                    </small>
+                </div>
+
+                <b>01</b>
+
+            </div>
+
+
+            <div id="drop" class="drop">
+
+                <input
+                    id="input"
+                    type="file"
+                    accept="image/jpeg,image/png"
+                    hidden
+                >
+
+
+                <!-- BEFORE IMAGE -->
+                <div id="placeholder">
+
+                    <div class="upload">
+                        ↑
+                    </div>
+
+                    <h3>
+                        Drop your image here
+                    </h3>
+
+                    <p>or</p>
+
+                    <button id="choose">
+                        Choose Image
+                    </button>
+
+                </div>
+
+
+                <!-- IMAGE PREVIEW -->
+                <div id="preview" class="hidden">
+
+                    <img id="img">
+
+                    <button id="remove">
+                        ×
+                    </button>
+
+                    <span id="fname"></span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="analyze"
+                class="analyze"
+                disabled
+            >
+                ✦ &nbsp;
+                <span>Analyze Plant</span>
+            </button>
+
+
+            <p
+                id="error"
+                class="error hidden"
+            ></p>
+
+        </div>
+
+
+
+        <!-- RESULT CARD -->
+        <div class="card">
+
+            <div class="heading">
+
+                <div>
+
+                    <h2>
+                        Analysis Result
+                    </h2>
+
+                    <small>
+                        Model prediction will appear here
+                    </small>
+
+                </div>
+
+                <b>02</b>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div
+                id="empty"
+                class="empty"
+            >
+
+                <div>
+                    ⌁
+                </div>
+
+                <h3>
+                    Waiting for an image
+                </h3>
+
+                <p>
+                    Upload a plant leaf and click
+                    <strong>Analyze Plant</strong>
+                    to see the prediction.
+                </p>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div
+                id="result"
+                class="hidden"
+            >
+
+                <div class="mainresult">
+
+                    <div id="icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <label id="status">
+                            CONFIDENT PREDICTION
+                        </label>
+
+                        <h3 id="pred">
+                            —
+                        </h3>
+
+                        <small id="conftext">
+                            —
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIDENCE -->
+                <div class="confidence">
+
+                    <div>
+
+                        <span>
+                            Prediction Confidence
+                        </span>
+
+                        <strong id="conf">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <section>
+                        <i id="bar"></i>
+                    </section>
+
+                </div>
+
+
+                <!-- TOP 5 -->
+                <div class="top">
+
+                    <div>
+                        <span>
+                            Top Predictions
+                        </span>
+
+                        <span>
+                            Confidence
+                        </span>
+                    </div>
+
+                    <div id="list"></div>
+
+                </div>
+
+
+                <button
+                    id="reset"
+                    class="reset"
+                >
+                    ↻ Analyze Another Image
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div>
+            🧠
+
+            <b>
+                Deep Learning
+            </b>
+
+            <small>
+                38 plant classes
+            </small>
+        </div>
+
+
+        <div>
+            🎯
+
+            <b>
+                96.89%
+            </b>
+
+            <small>
+                Test accuracy
+            </small>
+        </div>
+
+
+        <div>
+            ⚡
+
+            <b>
+                Fast API
+            </b>
+
+            <small>
+                Real-time prediction
+            </small>
+        </div>
+
+
+        <div>
+            🔒
+
+            <b>
+                Local Analysis
+            </b>
+
+            <small>
+                Secure image processing
+            </small>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    Plant Disease Detection • AI-powered agricultural assistant
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
