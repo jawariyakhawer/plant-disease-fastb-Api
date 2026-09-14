@@ -1,7 +1,5 @@
-fastapi==0.115.0
-uvicorn==0.30.6
-python-multipart==0.0.9
+streamlit==1.38.0
+tensorflow-cpu==2.17.0
 pillow==10.4.0
-numpy
-tensorflow
-pytest
+numpy<2.0
+groq==0.11.0
